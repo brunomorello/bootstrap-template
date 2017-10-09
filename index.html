@@ -3,19 +3,69 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
 	<!-- This site has the purpose for mobile first -->
 
 	<!-- width=device-width (Start Page content based on device width -->
 	<!-- initial-scale=1 (Mantain default zoom) -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
 	<title>Page Template</title>
 
 </head>
 <body>
 
-<h2>Sobre Nós</h2>
-<img class="img-responsive" src="img/empresa.jpg">
+<div class="container">
+	
+	<h2>Sobre Nós</h2>
+	<img class="img-responsive" src="img/empresa.jpg">
+
+	<div id="paineis-sobre" class="panel-group">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title" data-toggle="collapse" data-target="#primeiro-paragrafo" data-parent="#paineis-sobre">Desde 1935</h3>
+			</div>
+
+			<div id="primeiro-paragrafo" class="collapse in">
+				<div class="panel-body">
+					<p>A TopCasa Arquitetura está no mercado desde 1935</p>			
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title" data-toggle="collapse" data-target="#segundo-paragrafo" data-parent="#paineis-sobre">Preços acessíveis</h3>
+			</div>
+
+			<div id="segundo-paragrafo" class="collapse">
+				<div class="panel-body">
+					<p>A TopCasa Arquitetura possui preços para todos os bolsos</p>	
+				</div>
+			</div>
+		</div>
+
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title" data-toggle="collapse" data-target="#terceiro-paragrafo" data-parent="#paineis-sobre">Design e inovação</h3>
+			</div>
+
+			<div id="terceiro-paragrafo" class="collapse">
+				<div class="panel-body">
+					<p>Designs alinhados com as últimas referências</p>			
+				</div>
+			</div>
+		</div>		
+
+	</div>
+
+</div>
 
 </body>
 </html>
