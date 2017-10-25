@@ -10,3 +10,14 @@
 	margin-bottom: 0;
 	font-size: 24px;
 }
+
+.contato-grupo-radio,
+.contato-select {
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.contato-grupo-radio .radio:first-child {
+	margin-top: 0;
+}

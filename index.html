@@ -196,7 +196,7 @@
     <h3>Video Institucional</h3>
 
     <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/i_3Py1Aygel* frameborder=*0* allowfullscreen"></iframe>
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/i_3Py1Aygel" frameborder="0" allowfullscreen"></iframe>
     </div>
 </section>
 
@@ -204,7 +204,8 @@
 	<h3>Contato</h3>
 	<p>Entre em contato conosco</p>
 
-	<form>
+	<form action="#" method="post">
+		
 		<div class="form-group">
 			<label for="contato-nome">Nome:</label>
 			<input type="text" class="form-control" name="contato-nome" id="contato-nome" placeholder="Seu Nome">
@@ -213,10 +214,37 @@
 		<div class="form-group">
 			<label for="contato-email">Emai:</label>
 			<div class="input-group">
-				<span class="input-group-addon">@</span>
+				<div class="input-group-addon">@</div>
 				<input type="email" class="form-control" name="contato-email" id="contato-email" placeholder="Seu email">
 			</div>
 		</div>
+
+		<div class="contato-grupo-radio">
+			<div class="radio">
+				<label>
+					<input type="radio" name="contato-tipo-pessoa" checked>
+					Pessoa Física
+				</label>
+			</div>
+
+			<div class="radio">
+				<label>
+					<input type="radio" name="contato-tipo-pessoa">
+					Pessoa Juridica
+				</label>
+			</div>
+		</div><!--
+
+
+		--><select class="contato-select form-control">
+			<option disabled selected>Tipo de Situação</option>
+			<option>Casa</option>
+			<option>Apartamento</option>
+			<option>Mansão</option>
+		</select>
+
+		<button class="btn btn-primary" type="submit">Enviar</button>
+
 	</form>
 </section>
 
