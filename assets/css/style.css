@@ -65,14 +65,26 @@ footer address:last-child {
 }
 
 @media(min-width: 768px) {
-	
-	.projetos-responsivo {
-		width: 50%;
-		float: left;
-	}		
 
 	#paineis-sobre {
 		margin-top: 0;
 	}
 	
+	.jumbotron {
+		margin: 20px 0 20px;
+	}
+}
+
+@media(min-width: 992px) {
+
+	.empresa-banner {
+		left: 0;
+		transform: translate(0, -80%);
+		width: 50%;
+	}
+
+	.empresa-banner-wrapper {
+		position: relative;
+		height: 100%;
+	}
 }
