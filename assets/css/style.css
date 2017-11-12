@@ -34,6 +34,10 @@
 	transition: 0.3s;
 }
 
+.line_chart {
+	width: 70%;
+}
+
 
 html,
 body {
