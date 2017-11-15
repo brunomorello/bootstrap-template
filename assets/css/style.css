@@ -34,19 +34,11 @@
 	transition: 0.3s;
 }
 
-.line-chart {
-	width: 50%;
-	margin: 20px;
-	position: relative;
-	display: inline-block;
-	float: left;
-}
-
-.bars-chart {
+.chart {
 	width: 70%;
 	margin: 20px;
-	display: inline-block;
 	position: relative;
+	display: inline-block;
 	float: left;
 }
 

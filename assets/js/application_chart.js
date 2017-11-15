@@ -3,59 +3,6 @@ google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawLineChart);
 google.charts.setOnLoadCallback(drawBarsChart);
 
-function drawLineChart() {
-
-	var data = new google.visualization.DataTable();
-
-	//adding columns
-	data.addColumn('date', 'Date');
-	data.addColumn('number', 'Total Currency');
-	data.addColumn('number', 'Total Invested');
-
-	//adding number of rows
-	data.addRows(6);
-
-	//adding sample data
-	data.setValue(0, 0, new Date('2017-11-05'));
-	data.setValue(0, 1, 2045.29);
-	data.setValue(0, 2, 130.50);
-
-	data.setValue(1, 0, new Date('2017-11-06'));
-	data.setValue(1, 1, 1987.29);
-	data.setValue(1, 2, 188.50);
-
-	data.setValue(2, 0, new Date('2017-11-07'));
-	data.setValue(2, 1, 1867.29);
-	data.setValue(2, 2, 308.50);
-
-	data.setValue(3, 0, new Date('2017-11-08'));
-	data.setValue(3, 1, 1809.29);
-	data.setValue(3, 2, 366.50);
-
-	data.setValue(4, 0, new Date('2017-11-09'));
-	data.setValue(4, 1, 1559.29);
-	data.setValue(4, 2, 616.50);
-
-	data.setValue(5, 0, new Date('2017-11-10'));
-	data.setValue(5, 1, 1528.79);
-	data.setValue(5, 2, 647.00);
-
-
-	//creating a new chart
-	var line_chart = document.getElementById('line_chart');
-	var chart = new google.visualization.LineChart(line_chart);
-
-	//drawing the chart with specific title and widthxheight
-	chart.draw(data, 
-		{
-			with: 400, 
-			height: 240,
-			title: 'My Investments',
-			curveType: 'function'
-		});
-
-}
-
 function drawBarsChart() {
 
 	var data = new google.visualization.DataTable();
@@ -118,4 +65,83 @@ function drawBarsChart() {
 	}
 	*/
 
+}
+
+function drawLineChart() {
+
+	var data = new google.visualization.DataTable();
+
+	//adding columns
+	data.addColumn('date', 'Date');
+	data.addColumn('number', 'Total Currency');
+	data.addColumn('number', 'Total Invested');
+
+	//adding number of rows
+	data.addRows(6);
+
+	//adding sample data
+	data.setValue(0, 0, new Date('2017-11-05'));
+	data.setValue(0, 1, 2045.29);
+	data.setValue(0, 2, 130.50);
+
+	data.setValue(1, 0, new Date('2017-11-06'));
+	data.setValue(1, 1, 1987.29);
+	data.setValue(1, 2, 188.50);
+
+	data.setValue(2, 0, new Date('2017-11-07'));
+	data.setValue(2, 1, 1867.29);
+	data.setValue(2, 2, 308.50);
+
+	data.setValue(3, 0, new Date('2017-11-08'));
+	data.setValue(3, 1, 1809.29);
+	data.setValue(3, 2, 366.50);
+
+	data.setValue(4, 0, new Date('2017-11-09'));
+	data.setValue(4, 1, 1559.29);
+	data.setValue(4, 2, 616.50);
+
+	data.setValue(5, 0, new Date('2017-11-10'));
+	data.setValue(5, 1, 1528.79);
+	data.setValue(5, 2, 647.00);
+
+
+	//creating a new chart
+	var line_chart = document.getElementById('line_chart');
+	var chart = new google.visualization.LineChart(line_chart);
+
+	//drawing the chart with specific title and widthxheight
+	chart.draw(data, 
+		{
+			with: 400, 
+			height: 240,
+			title: 'My Investments',
+			curveType: 'function'
+		});
+
+}
+
+google.charts.load('current', {packages:['intensitymap']});
+google.charts.setOnLoadCallback(drawIntensiveMap);
+
+function drawIntensiveMap() {
+
+	var data = new google.visualization.arrayToDataTable([
+		['Country', 'Population (mil)', 'Area (km2)'],
+		['CN',       1324,              9640821],
+		['IN',       1133,              3287263],
+		['BR',       187,               8514877]
+	]);
+
+	//creating the cart
+	var map_chart = document.getElementById('maps_chart');
+	var chart = new google.visualization.IntensityMap(map_chart);
+
+	//chart options
+	var options = {
+		region: 'south_america',
+		height: 300,
+		width: 400
+	};
+
+	chart.draw(data, options);
 }
